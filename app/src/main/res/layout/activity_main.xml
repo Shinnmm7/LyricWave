@@ -1,0 +1,67 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#08090D" android:fillViewport="true">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:orientation="vertical" android:padding="20dp">
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="LYRICWAVE" android:textColor="#C084FC" android:textStyle="bold"
+            android:textSize="13sp" android:letterSpacing="0.18" />
+        <TextView android:id="@+id/songTitle" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Choose a song"
+            android:textColor="#FFFFFF" android:textSize="26sp" android:textStyle="bold"
+            android:layout_marginTop="22dp" />
+        <TextView android:id="@+id/artist" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Your local music library"
+            android:textColor="#A4A6B5" android:textSize="15sp" android:layout_marginTop="4dp" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="210dp"
+            android:gravity="center" android:layout_marginTop="22dp"
+            android:background="@drawable/panel_bg" android:orientation="vertical">
+            <TextView android:id="@+id/vinyl" android:layout_width="150dp" android:layout_height="150dp"
+                android:gravity="center" android:text="♫" android:textSize="64sp"
+                android:textColor="#FFFFFF" android:background="@drawable/panel_bg" />
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="NOW PLAYING" android:textColor="#777B91" android:textSize="10sp"
+                android:letterSpacing="0.2" android:layout_marginTop="10dp" />
+        </LinearLayout>
+        <TextView android:id="@+id/currentLyric" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Your lyrics will appear here"
+            android:gravity="center" android:textColor="#FFFFFF" android:textStyle="bold"
+            android:textSize="23sp" android:minHeight="86dp"
+            android:layout_marginTop="20dp" android:padding="12dp" />
+        <TextView android:id="@+id/nextLyric" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="Import an .lrc file to sync lyrics"
+            android:gravity="center" android:textColor="#777B91" android:textSize="16sp"
+            android:minHeight="40dp" />
+        <SeekBar android:id="@+id/progress" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:layout_marginTop="18dp"
+            android:progressTint="#C084FC" android:thumbTint="#FFFFFF" />
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:gravity="center_vertical" android:orientation="horizontal">
+            <TextView android:id="@+id/elapsed" android:layout_width="0dp"
+                android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="0:00" android:textColor="#A4A6B5" />
+            <TextView android:id="@+id/duration" android:layout_width="wrap_content"
+                android:layout_height="wrap_content" android:text="0:00" android:textColor="#A4A6B5" />
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="76dp"
+            android:gravity="center" android:orientation="horizontal">
+            <Button android:id="@+id/previous" android:layout_width="64dp" android:layout_height="56dp"
+                android:text="|◀" android:textColor="#FFFFFF" android:backgroundTint="#292B3A" />
+            <Button android:id="@+id/playPause" android:layout_width="82dp" android:layout_height="64dp"
+                android:layout_marginHorizontal="18dp" android:text="▶" android:textSize="22sp"
+                android:textColor="#FFFFFF" android:backgroundTint="#9333EA" />
+            <Button android:id="@+id/next" android:layout_width="64dp" android:layout_height="56dp"
+                android:text="▶|" android:textColor="#FFFFFF" android:backgroundTint="#292B3A" />
+        </LinearLayout>
+        <Button android:id="@+id/pickMusic" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="＋  Choose music files"
+            android:textColor="#FFFFFF" android:backgroundTint="#292B3A" />
+        <Button android:id="@+id/pickLyrics" android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:text="♫  Import synced lyrics (.lrc)"
+            android:textColor="#FFFFFF" android:backgroundTint="#292B3A" />
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Tip: Import a timed .lrc file for synchronized lyrics."
+            android:textColor="#777B91" android:textSize="12sp" android:layout_marginTop="8dp"
+            android:gravity="center" />
+    </LinearLayout>
+</ScrollView>
