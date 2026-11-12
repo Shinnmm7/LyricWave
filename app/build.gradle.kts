@@ -5,6 +5,16 @@ plugins {
 android {
     namespace = "com.shinnmm6.lyricwave"
     compileSdk = 35
+
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
+    }
+
+    kotlinOptions {
+        jvmTarget = "17"
+    }
+
     defaultConfig {
         applicationId = "com.shinnmm6.lyricwave"
         minSdk = 26
