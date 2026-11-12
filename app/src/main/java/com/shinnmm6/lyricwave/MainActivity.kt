@@ -169,7 +169,7 @@ class MainActivity : AppCompatActivity() {
             val sec = match.groupValues[2].toLong()
             val fraction = match.groupValues[3].padEnd(3, '0').take(3).ifEmpty { "000" }.toLong()
             LyricLine((min * 60 + sec) * 1000 + fraction, match.groupValues[4].trim())
-        }.sortedBy { it.timeMs }
+        }.sortedBy { it.timeMs }.toList()
     }
 
     private fun formatTime(ms: Long): String = String.format(Locale.US, "%d:%02d", ms / 60000, (ms / 1000) % 60)
